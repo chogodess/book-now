@@ -1089,223 +1089,6 @@
         border-radius: 6px;
       }
 
-      /* ===================== BOOKING FORM ===================== */
-      #booking {
-        padding: 100px 0;
-      }
-      .booking-inner {
-        display: grid;
-        grid-template-columns: 1fr 1.2fr;
-        gap: 60px;
-        align-items: start;
-      }
-      .booking-info h2 {
-        font-size: clamp(1.8rem, 4vw, 2.6rem);
-        font-weight: 800;
-        margin-bottom: 16px;
-      }
-      .booking-info p {
-        color: var(--muted);
-        line-height: 1.8;
-        margin-bottom: 32px;
-      }
-      .booking-contact-item {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-        padding: 16px 0;
-        border-bottom: 1px solid var(--glass-border);
-      }
-      .contact-icon {
-        width: 44px;
-        height: 44px;
-        background: rgba(255, 106, 0, 0.12);
-        border: 1px solid rgba(255, 106, 0, 0.2);
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.1rem;
-      }
-      .contact-label {
-        font-size: 0.75rem;
-        color: var(--muted);
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-      }
-      .contact-value {
-        font-size: 0.95rem;
-        font-weight: 700;
-        color: var(--white);
-      }
-      .booking-form-wrap {
-        background: var(--card-bg);
-        backdrop-filter: blur(30px);
-        border: 1px solid var(--glass-border);
-        border-radius: 28px;
-        padding: 44px 40px;
-        box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
-      }
-      .form-title {
-        font-size: 1.4rem;
-        font-weight: 800;
-        margin-bottom: 28px;
-      }
-      .form-group {
-        position: relative;
-        margin-bottom: 20px;
-      }
-      .form-group label {
-        position: absolute;
-        left: 18px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 0.88rem;
-        color: var(--muted);
-        font-weight: 500;
-        transition: var(--transition);
-        pointer-events: none;
-        background: transparent;
-      }
-      .form-group.textarea-group label {
-        top: 18px;
-        transform: none;
-      }
-      .form-group input,
-      .form-group select,
-      .form-group textarea {
-        width: 100%;
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid var(--glass-border);
-        border-radius: 14px;
-        padding: 18px 18px 10px;
-        color: white;
-        font-family: var(--font-body);
-        font-size: 0.95rem;
-        transition: var(--transition);
-        outline: none;
-        -webkit-appearance: none;
-        appearance: none;
-      }
-      .form-group textarea {
-        min-height: 100px;
-        resize: none;
-        padding-top: 30px;
-      }
-      .form-group select option {
-        background: var(--navy-deep);
-      }
-      .form-group input:focus,
-      .form-group select:focus,
-      .form-group textarea:focus {
-        border-color: rgba(255, 106, 0, 0.5);
-        background: rgba(255, 106, 0, 0.05);
-        box-shadow: 0 0 0 3px rgba(255, 106, 0, 0.1);
-      }
-      .form-group input:focus ~ label,
-      .form-group input:not(:placeholder-shown) ~ label,
-      .form-group select:focus ~ label,
-      .form-group select:valid ~ label,
-      .form-group textarea:focus ~ label,
-      .form-group textarea:not(:placeholder-shown) ~ label {
-        top: 10px;
-        font-size: 0.72rem;
-        color: var(--orange);
-        transform: translateY(0);
-      }
-      .form-group input::placeholder,
-      .form-group textarea::placeholder {
-        color: transparent;
-      }
-      .form-row {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
-      }
-      .submit-btn {
-        width: 100%;
-        padding: 18px;
-        background: linear-gradient(135deg, var(--orange), var(--orange-light));
-        color: white;
-        font-family: var(--font-body);
-        font-size: 1rem;
-        font-weight: 800;
-        border: none;
-        border-radius: 14px;
-        cursor: pointer;
-        transition: var(--transition);
-        letter-spacing: 0.03em;
-        margin-top: 8px;
-        box-shadow: 0 8px 30px rgba(255, 106, 0, 0.4);
-        position: relative;
-        overflow: hidden;
-      }
-      .submit-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 16px 40px rgba(255, 106, 0, 0.55);
-      }
-      .submit-btn:disabled {
-        opacity: 0.7;
-        cursor: not-allowed;
-        transform: none;
-      }
-      .submit-btn .btn-loader {
-        display: none;
-        width: 20px;
-        height: 20px;
-        border: 2px solid rgba(255, 255, 255, 0.3);
-        border-top-color: white;
-        border-radius: 50%;
-        animation: spin 0.8s linear infinite;
-        margin: 0 auto;
-      }
-      .submit-btn.loading .btn-text {
-        display: none;
-      }
-      .submit-btn.loading .btn-loader {
-        display: block;
-      }
-      @keyframes spin {
-        to {
-          transform: rotate(360deg);
-        }
-      }
-
-      .form-success {
-        display: none;
-        text-align: center;
-        padding: 40px 20px;
-      }
-      .form-success.show {
-        display: block;
-      }
-      .success-icon {
-        font-size: 4rem;
-        margin-bottom: 16px;
-        animation: pop 0.5s ease;
-      }
-      @keyframes pop {
-        0% {
-          transform: scale(0);
-        }
-        70% {
-          transform: scale(1.2);
-        }
-        100% {
-          transform: scale(1);
-        }
-      }
-      .success-title {
-        font-size: 1.5rem;
-        font-weight: 800;
-        margin-bottom: 10px;
-      }
-      .success-text {
-        color: var(--muted);
-        font-size: 0.95rem;
-      }
-
       /* ===================== FAQ ===================== */
       #faq {
         padding: 100px 0;
@@ -1436,12 +1219,178 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-wrap: gap;
+        flex-wrap: wrap;
         gap: 16px;
       }
       .footer-copy {
         font-size: 0.82rem;
         color: var(--muted);
+      }
+
+      /* ===================== GOOGLE FORM MODAL ===================== */
+      .modal-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(7, 24, 40, 0.92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        z-index: 9999;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        animation: fadeOverlay 0.3s ease forwards;
+      }
+      .modal-overlay.active {
+        display: flex;
+      }
+      @keyframes fadeOverlay {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      .modal-box {
+        background: var(--navy);
+        border: 1px solid rgba(255, 106, 0, 0.25);
+        border-radius: 24px;
+        width: 100%;
+        max-width: 720px;
+        max-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6),
+          0 0 0 1px rgba(255, 106, 0, 0.1);
+        animation: slideUpModal 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      }
+      @keyframes slideUpModal {
+        from {
+          opacity: 0;
+          transform: translateY(40px) scale(0.97);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+      .modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 28px;
+        border-bottom: 1px solid var(--glass-border);
+        flex-shrink: 0;
+      }
+      .modal-header-left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .modal-header-icon {
+        width: 42px;
+        height: 42px;
+        background: linear-gradient(135deg, var(--orange), var(--orange-light));
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+        box-shadow: 0 4px 16px rgba(255, 106, 0, 0.4);
+      }
+      .modal-header-title {
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: var(--white);
+        line-height: 1.2;
+      }
+      .modal-header-sub {
+        font-size: 0.75rem;
+        color: var(--muted);
+        font-weight: 500;
+        margin-top: 2px;
+      }
+      .modal-close {
+        width: 38px;
+        height: 38px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid var(--glass-border);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 1.1rem;
+        color: var(--muted);
+        transition: var(--transition);
+        flex-shrink: 0;
+      }
+      .modal-close:hover {
+        background: rgba(255, 106, 0, 0.15);
+        border-color: rgba(255, 106, 0, 0.4);
+        color: var(--white);
+      }
+      .modal-body {
+        flex: 1;
+        overflow: hidden;
+        position: relative;
+        min-height: 500px;
+      }
+      .modal-loader {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        background: var(--navy);
+        z-index: 2;
+        transition: opacity 0.4s ease;
+      }
+      .modal-loader.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .modal-spinner {
+        width: 44px;
+        height: 44px;
+        border: 3px solid rgba(255, 106, 0, 0.2);
+        border-top-color: var(--orange);
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+      .modal-loader p {
+        font-size: 0.88rem;
+        color: var(--muted);
+        font-weight: 500;
+      }
+      .modal-iframe {
+        width: 100%;
+        height: 100%;
+        min-height: 500px;
+        border: none;
+        display: block;
+        background: white;
+      }
+      .modal-footer {
+        padding: 14px 28px;
+        border-top: 1px solid var(--glass-border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        flex-shrink: 0;
+      }
+      .modal-footer p {
+        font-size: 0.75rem;
+        color: var(--muted);
+      }
+      .modal-footer span {
+        color: var(--orange);
+        font-weight: 700;
       }
 
       /* ===================== RESPONSIVE ===================== */
@@ -1452,9 +1401,6 @@
           grid-template-columns: repeat(2, 1fr);
         }
         .problem-grid {
-          grid-template-columns: 1fr;
-        }
-        .booking-inner {
           grid-template-columns: 1fr;
         }
         .footer-grid {
@@ -1494,9 +1440,6 @@
         .hero-stats {
           gap: 24px;
         }
-        .form-row {
-          grid-template-columns: 1fr;
-        }
         .footer-grid {
           grid-template-columns: 1fr;
         }
@@ -1504,20 +1447,58 @@
           flex-direction: column;
           text-align: center;
         }
-        .booking-form-wrap {
-          padding: 28px 20px;
+        .modal-box {
+          max-height: 95vh;
+          border-radius: 16px;
+        }
+        .modal-header {
+          padding: 16px 20px;
+        }
+        .modal-footer {
+          padding: 12px 20px;
         }
         .trust-badges {
           display: grid;
           grid-template-columns: 1fr 1fr;
         }
-        .float-cta-btn span.label {
-          display: none;
-        }
       }
     </style>
   </head>
   <body>
+
+    <!-- ============================== GOOGLE FORM MODAL ============================== -->
+    <div class="modal-overlay" id="bookingModal" role="dialog" aria-modal="true" aria-label="Book a Repair">
+      <div class="modal-box">
+        <div class="modal-header">
+          <div class="modal-header-left">
+            <div class="modal-header-icon">📅</div>
+            <div>
+              <div class="modal-header-title">Book Your Repair</div>
+              <div class="modal-header-sub">SG Mobile Repair · Tarlac City · Takes ~60 seconds</div>
+            </div>
+          </div>
+          <button class="modal-close" id="modalClose" aria-label="Close modal">✕</button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-loader" id="modalLoader">
+            <div class="modal-spinner"></div>
+            <p>Loading booking form…</p>
+          </div>
+          <iframe
+            class="modal-iframe"
+            id="bookingIframe"
+            src=""
+            data-src="https://docs.google.com/forms/d/e/1FAIpQLSeSgZhmNmu2haOaaFE5Rl2i5d8lX43Yju1VPgDp3JtWMP7Z8g/viewform?embedded=true"
+            title="SG Mobile Repair Booking Form"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="modal-footer">
+          <p>🔒 Secure form powered by <span>Google Forms</span> · SG Mobile Repair</p>
+        </div>
+      </div>
+    </div>
+
     <!-- ============================== NAV ============================== -->
     <nav id="navbar">
       <div class="container">
@@ -1533,13 +1514,7 @@
             <a href="#why">Why Us</a>
             <a href="#process">How It Works</a>
             <a href="#testimonials">Reviews</a>
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeSgZhmNmu2haOaaFE5Rl2i5d8lX43Yju1VPgDp3JtWMP7Z8g/viewform"
-              class="btn-primary nav-cta"
-              target="_blank"
-            >
-              Book Now</a
-            >
+            <button class="btn-primary nav-cta open-modal">Book Now</button>
           </div>
           <button
             class="nav-hamburger"
@@ -1559,14 +1534,11 @@
       <a href="#why" onclick="closeMobileMenu()">Why Us</a>
       <a href="#process" onclick="closeMobileMenu()">How It Works</a>
       <a href="#testimonials" onclick="closeMobileMenu()">Reviews</a>
-      <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSeSgZhmNmu2haOaaFE5Rl2i5d8lX43Yju1VPgDp3JtWMP7Z8g/viewform"
-        class="btn-primary"
-        target="_blank"
-        onclick="closeMobileMenu()"
+      <button
+        class="btn-primary open-modal"
         style="margin-top: 10px"
-        >Book Now</a
-      >
+        onclick="closeMobileMenu()"
+      >Book Now</button>
     </div>
 
     <!-- ============================== HERO ============================== -->
@@ -1596,20 +1568,18 @@
           </p>
 
           <div class="hero-ctas">
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeSgZhmNmu2haOaaFE5Rl2i5d8lX43Yju1VPgDp3JtWMP7Z8g/viewform"
-              class="btn-primary"
-              target="_blank"
+            <button
+              class="btn-primary open-modal"
               style="font-size: 1.05rem; padding: 18px 36px"
             >
               Book Your Repair
-            </a>
+            </button>
             <a
               href="https://www.facebook.com/profile.php?id=100094707949953"
               target="_blank"
               class="btn-secondary"
             >
-              🔍 Get Free Quotaion
+              🔍 Get Free Quotation
             </a>
           </div>
 
@@ -1675,7 +1645,6 @@
         <span class="brand-label">📲 Infinix</span>
         <span class="brand-label">📱 Honor</span>
         <span class="brand-label">📲 Huawei</span>
-        <!-- Duplicate for infinite scroll -->
         <span class="brand-label">📱 iPhone</span>
         <span class="brand-label">🤖 Samsung</span>
         <span class="brand-label">📲 OPPO</span>
@@ -1735,24 +1704,13 @@
                 your phone right in front of you — no waiting, no commuting.
               </p>
               <div class="solution-feature">No need to leave your home</div>
-              <div class="solution-feature">
-                Most repairs done in under 60 minutes
-              </div>
-              <div class="solution-feature">
-                Transparent pricing — no surprise fees
-              </div>
-              <div class="solution-feature">
-                Full service warranty on every repair
-              </div>
+              <div class="solution-feature">Most repairs done in under 60 minutes</div>
+              <div class="solution-feature">Transparent pricing — no surprise fees</div>
+              <div class="solution-feature">Full service warranty on every repair</div>
               <div class="solution-feature">GCash, Maya, and cash accepted</div>
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeSgZhmNmu2haOaaFE5Rl2i5d8lX43Yju1VPgDp3JtWMP7Z8g/viewform"
-                target="_blank"
-                class="btn-primary"
-                style="margin-top: 28px"
-              >
+              <button class="btn-primary open-modal" style="margin-top: 28px">
                 Book Home Service →
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -1775,60 +1733,37 @@
           <div class="service-card reveal" style="transition-delay: 0.05s">
             <div class="service-icon">📺</div>
             <h3>Screen Replacement</h3>
-            <p>
-              Cracked, shattered, or dead display? We replace LCD and AMOLED
-              screens for all brands with OEM-quality parts.
-            </p>
+            <p>Cracked, shattered, or dead display? We replace LCD and AMOLED screens for all brands with OEM-quality parts.</p>
           </div>
           <div class="service-card reveal" style="transition-delay: 0.1s">
             <div class="service-icon">🔋</div>
             <h3>Battery Replacement</h3>
-            <p>
-              Draining fast or won't hold charge? We install tested,
-              high-quality batteries to get you back to full power.
-            </p>
+            <p>Draining fast or won't hold charge? We install tested, high-quality batteries to get you back to full power.</p>
           </div>
           <div class="service-card reveal" style="transition-delay: 0.15s">
             <div class="service-icon">🔌</div>
             <h3>Charging Port Repair</h3>
-            <p>
-              Loose connector or won't charge at all? We deep-clean or replace
-              your charging port on the spot.
-            </p>
+            <p>Loose connector or won't charge at all? We deep-clean or replace your charging port on the spot.</p>
           </div>
           <div class="service-card reveal" style="transition-delay: 0.2s">
             <div class="service-icon">💧</div>
             <h3>Water Damage Repair</h3>
-            <p>
-              Dropped in water? We perform component-level cleaning and repair
-              to revive your device as fast as possible.
-            </p>
+            <p>Dropped in water? We perform component-level cleaning and repair to revive your device as fast as possible.</p>
           </div>
           <div class="service-card reveal" style="transition-delay: 0.25s">
             <div class="service-icon">📷</div>
             <h3>Camera Repair</h3>
-            <p>
-              Blurry photos or front camera not working? We replace front and
-              rear camera modules for any brand.
-            </p>
+            <p>Blurry photos or front camera not working? We replace front and rear camera modules for any brand.</p>
           </div>
           <div class="service-card reveal" style="transition-delay: 0.3s">
             <div class="service-icon">💻</div>
             <h3>Software Fix</h3>
-            <p>
-              Forgot password, stuck in bootloop, or lagging device? We flash
-              firmware and restore your phone to perfect condition.
-            </p>
+            <p>Forgot password, stuck in bootloop, or lagging device? We flash firmware and restore your phone to perfect condition.</p>
           </div>
         </div>
 
         <div style="text-align: center; margin-top: 44px" class="reveal">
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeSgZhmNmu2haOaaFE5Rl2i5d8lX43Yju1VPgDp3JtWMP7Z8g/viewform"
-            target="_blank"
-            class="btn-primary"
-            >Book Your Repair Today</a
-          >
+          <button class="btn-primary open-modal">Book Your Repair Today</button>
         </div>
       </div>
     </section>
@@ -1840,8 +1775,7 @@
           <div class="section-tag">Why You Choose Us</div>
           <h2 class="section-title">Why Tarlac Customers Trust Us</h2>
           <p class="section-sub" style="margin: 0 auto">
-            We're not just another repair shop. We deliver a premium repair
-            experience — at your door.
+            We're not just another repair shop. We deliver a premium repair experience — at your door.
           </p>
         </div>
 
@@ -1849,59 +1783,37 @@
           <div class="why-card reveal" style="transition-delay: 0.05s">
             <span class="why-icon">🏠</span>
             <h3>Home Service Convenience</h3>
-            <p>
-              We come directly to your location anywhere in Tarlac City. No
-              commute, no queues, no stress.
-            </p>
+            <p>We come directly to your location anywhere in Tarlac City. No commute, no queues, no stress.</p>
           </div>
           <div class="why-card reveal" style="transition-delay: 0.1s">
             <span class="why-icon">⚡</span>
             <h3>Same-Day Repair</h3>
-            <p>
-              Book in the morning, get your phone fixed the same day. Most
-              repairs completed in under 60 minutes.
-            </p>
+            <p>Book in the morning, get your phone fixed the same day. Most repairs completed in under 60 minutes.</p>
           </div>
           <div class="why-card reveal" style="transition-delay: 0.15s">
             <span class="why-icon">💰</span>
             <h3>Affordable Pricing</h3>
-            <p>
-              Transparent, fair pricing with no hidden fees. You get a full
-              quote before we start — zero surprises.
-            </p>
+            <p>Transparent, fair pricing with no hidden fees. You get a full quote before we start — zero surprises.</p>
           </div>
           <div class="why-card reveal" style="transition-delay: 0.2s">
             <span class="why-icon">👨‍🔧</span>
             <h3>Experienced Technician</h3>
-            <p>
-              Certified and professional. We handle your device with precision,
-              care, and years of expertise.
-            </p>
+            <p>Certified and professional. We handle your device with precision, care, and years of expertise.</p>
           </div>
           <div class="why-card reveal" style="transition-delay: 0.25s">
             <span class="why-icon">🛡️</span>
             <h3>Warranty Included</h3>
-            <p>
-              Every repair comes with a service warranty. If the same issue
-              comes back, we fix it — at no extra cost.
-            </p>
+            <p>Every repair comes with a service warranty. If the same issue comes back, we fix it — at no extra cost.</p>
           </div>
           <div class="why-card reveal" style="transition-delay: 0.3s">
             <span class="why-icon">🚀</span>
             <h3>Fast Response Time</h3>
-            <p>
-              Book online and get a confirmation within minutes. We respond fast
-              and show up on time, every time.
-            </p>
+            <p>Book online and get a confirmation within minutes. We respond fast and show up on time, every time.</p>
           </div>
         </div>
+
         <div style="text-align: center; margin-top: 44px" class="reveal">
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeSgZhmNmu2haOaaFE5Rl2i5d8lX43Yju1VPgDp3JtWMP7Z8g/viewform"
-            target="_blank"
-            class="btn-primary"
-            >Book Your Repair Today</a
-          >
+          <button class="btn-primary open-modal">Book Your Repair Today</button>
         </div>
       </div>
     </section>
@@ -1913,8 +1825,7 @@
           <div class="section-tag">How It Works</div>
           <h2 class="section-title">Fixed in 3 Simple Steps</h2>
           <p class="section-sub" style="margin: 0 auto">
-            Getting your phone repaired has never been this easy. From booking
-            to done — in under an hour.
+            Getting your phone repaired has never been this easy. From booking to done — in under an hour.
           </p>
         </div>
 
@@ -1922,38 +1833,27 @@
           <div class="process-step reveal" style="transition-delay: 0.05s">
             <div class="step-num"><span class="step-icon">📅</span></div>
             <div class="step-title">1. Book Appointment</div>
-            <p class="step-desc">
-              Fill out our quick booking form. Choose your preferred date and
-              time — takes less than 60 seconds.
-            </p>
+            <p class="step-desc">Fill out our quick booking form. Choose your preferred date and time — takes less than 60 seconds.</p>
           </div>
           <div class="process-step reveal" style="transition-delay: 0.15s">
             <div class="step-num"><span class="step-icon">🏍️</span></div>
             <div class="step-title">2. Technician Visits</div>
-            <p class="step-desc">
-              Our certified technician arrives at your location with all tools
-              and parts — right on schedule.
-            </p>
+            <p class="step-desc">Our certified technician arrives at your location with all tools and parts — right on schedule.</p>
           </div>
           <div class="process-step reveal" style="transition-delay: 0.25s">
             <div class="step-num"><span class="step-icon">✅</span></div>
             <div class="step-title">3. Device Fixed</div>
-            <p class="step-desc">
-              Watch your phone get repaired right in front of you. Done in under
-              60 minutes, backed by warranty.
-            </p>
+            <p class="step-desc">Watch your phone get repaired right in front of you. Done in under 60 minutes, backed by warranty.</p>
           </div>
         </div>
 
         <div style="text-align: center; margin-top: 52px" class="reveal">
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeSgZhmNmu2haOaaFE5Rl2i5d8lX43Yju1VPgDp3JtWMP7Z8g/viewform"
-            target="_blank"
-            class="btn-primary"
+          <button
+            class="btn-primary open-modal"
             style="font-size: 1.05rem; padding: 18px 40px"
           >
             Start Your Booking Now →
-          </a>
+          </button>
         </div>
       </div>
     </section>
@@ -1965,8 +1865,7 @@
           <div class="section-tag">Customer Reviews</div>
           <h2 class="section-title">What Our Customers Say</h2>
           <p class="section-sub" style="margin: 0 auto">
-            Real reviews from real people in Tarlac City who trusted us with
-            their phones.
+            Real reviews from real people in Tarlac City who trusted us with their phones.
           </p>
         </div>
 
@@ -1974,17 +1873,13 @@
           <div class="testimonial-card reveal" style="transition-delay: 0.05s">
             <div class="stars">★★★★★</div>
             <p class="testimonial-text">
-              "Very fast service! They fixed my cracked screen at home in less
-              than 60 minutes. Super convenient talaga! Hindi na ako kelangan
-              lumabas ng bahay."
+              "Very fast service! They fixed my cracked screen at home in less than 60 minutes. Super convenient talaga! Hindi na ako kelangan lumabas ng bahay."
             </p>
             <div class="testimonial-author">
               <div class="author-avatar">M</div>
               <div>
                 <div class="author-name">Maria R.</div>
-                <div class="author-service">
-                  iPhone Screen Repair · Tarlac City
-                </div>
+                <div class="author-service">iPhone Screen Repair · Tarlac City</div>
               </div>
             </div>
           </div>
@@ -1992,9 +1887,7 @@
           <div class="testimonial-card reveal" style="transition-delay: 0.1s">
             <div class="stars">★★★★★</div>
             <p class="testimonial-text">
-              "Affordable and professional. Hindi ako makapaniwala na ganyan
-              kabilis! Nag-home service pa sila. Highly recommended sa lahat ng
-              naghahanap ng mura at mabilis na repair!"
+              "Affordable and professional. Hindi ako makapaniwala na ganyan kabilis! Nag-home service pa sila. Highly recommended sa lahat ng naghahanap ng mura at mabilis na repair!"
             </p>
             <div class="testimonial-author">
               <div class="author-avatar">J</div>
@@ -2008,9 +1901,7 @@
           <div class="testimonial-card reveal" style="transition-delay: 0.15s">
             <div class="stars">★★★★★</div>
             <p class="testimonial-text">
-              "Dead boot na yung phone ko dahil nababad sa tubig. Nag-home
-              service sila at after 1 hour buhay na ulit! May warranty pa.
-              Sobrang galing at sulit na sulit!"
+              "Dead boot na yung phone ko dahil nababad sa tubig. Nag-home service sila at after 1 hour buhay na ulit! May warranty pa. Sobrang galing at sulit na sulit!"
             </p>
             <div class="testimonial-author">
               <div class="author-avatar">A</div>
@@ -2024,9 +1915,7 @@
           <div class="testimonial-card reveal" style="transition-delay: 0.2s">
             <div class="stars">★★★★★</div>
             <p class="testimonial-text">
-              "Ang bilis nila mag-respond! Kinabukasan pa lang nandito na sila.
-              Yung screen ko nga pinaghandaan pa nilang magdala ng tamang part.
-              Legit and trustworthy sila!"
+              "Ang bilis nila mag-respond! Kinabukasan pa lang nandito na sila. Yung screen ko nga pinaghandaan pa nilang magdala ng tamang part. Legit and trustworthy sila!"
             </p>
             <div class="testimonial-author">
               <div class="author-avatar">R</div>
@@ -2040,9 +1929,7 @@
           <div class="testimonial-card reveal" style="transition-delay: 0.25s">
             <div class="stars">★★★★★</div>
             <p class="testimonial-text">
-              "Charging port ko hindi na gumagana. Isang tawag lang, dumating na
-              sila. Ilang minutes lang, tapos na. Talagang worth it — hindi pa
-              expensive!"
+              "Charging port ko hindi na gumagana. Isang tawag lang, dumating na sila. Ilang minutes lang, tapos na. Talagang worth it — hindi pa expensive!"
             </p>
             <div class="testimonial-author">
               <div class="author-avatar">C</div>
@@ -2056,9 +1943,7 @@
           <div class="testimonial-card reveal" style="transition-delay: 0.3s">
             <div class="stars">★★★★★</div>
             <p class="testimonial-text">
-              "Camera ko blurry na. Sabi nila pwede nilang palitan. Sineserbisyo
-              talaga nang maayos at may warranty pa. Dito na talaga ako
-              mag-aayos ng phone from now on!"
+              "Camera ko blurry na. Sabi nila pwede nilang palitan. Sineserbisyo talaga nang maayos at may warranty pa. Dito na talaga ako mag-aayos ng phone from now on!"
             </p>
             <div class="testimonial-author">
               <div class="author-avatar">B</div>
@@ -2077,24 +1962,19 @@
       <div class="container">
         <div class="urgency-content">
           <p class="urgency-text">
-            ⏳ Limited Time: <span>10% OFF All Repairs</span> — Ends This Week!
-            Book Now & Save.
+            ⏳ Limited Time: <span>10% OFF All Repairs</span> — Ends This Week! Book Now & Save.
           </p>
         </div>
       </div>
     </section>
-    <div
-      style="text-align: center; margin-top: 30px; margin-bottom: 30px"
-      class="reveal"
-    >
-      <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSeSgZhmNmu2haOaaFE5Rl2i5d8lX43Yju1VPgDp3JtWMP7Z8g/viewform"
-        target="_blank"
-        class="btn-primary"
+
+    <div style="text-align: center; margin-top: 30px; margin-bottom: 30px" class="reveal">
+      <button
+        class="btn-primary open-modal"
         style="font-size: 1.05rem; padding: 18px 40px"
       >
         Start Your Booking Now →
-      </a>
+      </button>
     </div>
 
     <!-- ============================== FAQ ============================== -->
@@ -2115,12 +1995,7 @@
               <span class="faq-arrow">+</span>
             </button>
             <div class="faq-a">
-              <p>
-                Most repairs take 30–60 minutes. Simple repairs like screen or
-                battery replacement are usually done in under 30 minutes.
-                Complex repairs (like water damage) may take longer — we'll
-                always tell you upfront.
-              </p>
+              <p>Most repairs take 30–60 minutes. Simple repairs like screen or battery replacement are usually done in under 30 minutes. Complex repairs (like water damage) may take longer — we'll always tell you upfront.</p>
             </div>
           </div>
           <div class="faq-item reveal">
@@ -2129,11 +2004,7 @@
               <span class="faq-arrow">+</span>
             </button>
             <div class="faq-a">
-              <p>
-                Yes! Every repair comes with a service warranty. If the same
-                issue recurs within the warranty period, we'll fix it again at
-                no extra cost — guaranteed.
-              </p>
+              <p>Yes! Every repair comes with a service warranty. If the same issue recurs within the warranty period, we'll fix it again at no extra cost — guaranteed.</p>
             </div>
           </div>
           <div class="faq-item reveal">
@@ -2142,11 +2013,7 @@
               <span class="faq-arrow">+</span>
             </button>
             <div class="faq-a">
-              <p>
-                We cover Tarlac City and nearby surrounding areas. When you
-                book, enter your address and we'll confirm availability for your
-                location right away — usually within minutes.
-              </p>
+              <p>We cover Tarlac City and nearby surrounding areas. When you book, enter your address and we'll confirm availability for your location right away — usually within minutes.</p>
             </div>
           </div>
           <div class="faq-item reveal">
@@ -2155,11 +2022,7 @@
               <span class="faq-arrow">+</span>
             </button>
             <div class="faq-a">
-              <p>
-                Pricing depends on your device model and the specific issue. We
-                provide a full quote before starting any work — no hidden fees,
-                no surprises. We accept cash, GCash, and Maya.
-              </p>
+              <p>Pricing depends on your device model and the specific issue. We provide a full quote before starting any work — no hidden fees, no surprises. We accept cash, GCash, and Maya.</p>
             </div>
           </div>
           <div class="faq-item reveal">
@@ -2168,11 +2031,7 @@
               <span class="faq-arrow">+</span>
             </button>
             <div class="faq-a">
-              <p>
-                We repair all major brands — iPhone, Samsung, OPPO, Vivo,
-                Realme, Xiaomi, Honor, Tecno, Infinix, Huawei, and more. If
-                you're unsure, just book and we'll confirm before the visit!
-              </p>
+              <p>We repair all major brands — iPhone, Samsung, OPPO, Vivo, Realme, Xiaomi, Honor, Tecno, Infinix, Huawei, and more. If you're unsure, just book and we'll confirm before the visit!</p>
             </div>
           </div>
           <div class="faq-item reveal">
@@ -2181,11 +2040,7 @@
               <span class="faq-arrow">+</span>
             </button>
             <div class="faq-a">
-              <p>
-                Just have your phone and charger ready, and be able to describe
-                the issue. Our technician brings all tools and parts needed for
-                most common repairs — no preparation required on your end.
-              </p>
+              <p>Just have your phone and charger ready, and be able to describe the issue. Our technician brings all tools and parts needed for most common repairs — no preparation required on your end.</p>
             </div>
           </div>
         </div>
@@ -2236,8 +2091,7 @@
 
         <div class="footer-bottom">
           <p class="footer-copy">
-            © 2026 SG Mobile Repair · Tarlac City, Philippines · All rights
-            reserved.
+            © 2026 SG Mobile Repair · Tarlac City, Philippines · All rights reserved.
           </p>
           <p class="footer-copy" style="color: var(--orange)">
             ⚡ Powered by SG Mobile Repair Services
@@ -2250,36 +2104,78 @@
     <script>
       // ── Navbar scroll effect
       const navbar = document.getElementById("navbar");
-      window.addEventListener(
-        "scroll",
-        () => {
-          navbar.classList.toggle("scrolled", window.scrollY > 60);
-        },
-        { passive: true }
-      );
+      window.addEventListener("scroll", () => {
+        navbar.classList.toggle("scrolled", window.scrollY > 60);
+      }, { passive: true });
 
       // ── Mobile menu
       const hamburger = document.getElementById("hamburgerBtn");
       const mobileMenu = document.getElementById("mobileMenu");
       const mobileClose = document.getElementById("mobileClose");
 
-      hamburger.addEventListener("click", () =>
-        mobileMenu.classList.add("open")
-      );
-      mobileClose.addEventListener("click", () =>
-        mobileMenu.classList.remove("open")
-      );
+      hamburger.addEventListener("click", () => mobileMenu.classList.add("open"));
+      mobileClose.addEventListener("click", () => mobileMenu.classList.remove("open"));
+
       function closeMobileMenu() {
         mobileMenu.classList.remove("open");
       }
 
+      // ── MODAL LOGIC
+      const modal        = document.getElementById("bookingModal");
+      const modalClose   = document.getElementById("modalClose");
+      const modalLoader  = document.getElementById("modalLoader");
+      const bookingIframe = document.getElementById("bookingIframe");
+      let   iframeLoaded = false;
+
+      function openModal() {
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+
+        // Lazy-load iframe only on first open
+        if (!iframeLoaded) {
+          const src = bookingIframe.getAttribute("data-src");
+          bookingIframe.src = src;
+          iframeLoaded = true;
+
+          bookingIframe.addEventListener("load", () => {
+            modalLoader.classList.add("hidden");
+          }, { once: true });
+
+          // Fallback: hide loader after 6s even if load event doesn't fire
+          setTimeout(() => modalLoader.classList.add("hidden"), 6000);
+        }
+      }
+
+      function closeModal() {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+
+      // Open modal on all .open-modal triggers
+      document.querySelectorAll(".open-modal").forEach((btn) => {
+        btn.addEventListener("click", openModal);
+      });
+
+      // Close on X button
+      modalClose.addEventListener("click", closeModal);
+
+      // Close on overlay click (outside modal box)
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+      });
+
+      // Close on Escape key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.classList.contains("active")) {
+          closeModal();
+        }
+      });
+
       // ── Scroll reveal
-      const revealEls = document.querySelectorAll(
-        ".reveal, .reveal-left, .reveal-right"
-      );
+      const revealEls = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
       const revealObs = new IntersectionObserver(
         (entries) => {
-          entries.forEach((entry, i) => {
+          entries.forEach((entry) => {
             if (entry.isIntersecting) {
               const delay = parseFloat(entry.target.style.transitionDelay || 0);
               setTimeout(() => {
@@ -2298,57 +2194,9 @@
         btn.addEventListener("click", () => {
           const item = btn.closest(".faq-item");
           const isOpen = item.classList.contains("open");
-          document
-            .querySelectorAll(".faq-item")
-            .forEach((i) => i.classList.remove("open"));
+          document.querySelectorAll(".faq-item").forEach((i) => i.classList.remove("open"));
           if (!isOpen) item.classList.add("open");
         });
-      });
-
-      // ── Set min date on date picker
-      const dateInput = document.getElementById("date");
-      if (dateInput) {
-        const today = new Date();
-        const yyyy = today.getFullYear();
-        const mm = String(today.getMonth() + 1).padStart(2, "0");
-        const dd = String(today.getDate()).padStart(2, "0");
-        dateInput.min = `${yyyy}-${mm}-${dd}`;
-      }
-
-      // ── Booking form submit
-      const form = document.getElementById("bookingForm");
-      const submitBtn = document.getElementById("submitBtn");
-      const formSuccess = document.getElementById("formSuccess");
-      const formContent = document.getElementById("bookingFormContent");
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        // Validation
-        const requiredFields = form.querySelectorAll("[required]");
-        let valid = true;
-        requiredFields.forEach((field) => {
-          if (!field.value.trim()) {
-            field.style.borderColor = "#FF4444";
-            valid = false;
-            setTimeout(() => (field.style.borderColor = ""), 2500);
-          }
-        });
-        if (!valid) return;
-
-        // Loading state
-        submitBtn.classList.add("loading");
-        submitBtn.disabled = true;
-
-        // Simulate API call (replace with real endpoint / GHL integration)
-        setTimeout(() => {
-          formContent.style.opacity = "0";
-          formContent.style.transition = "opacity 0.4s ease";
-          setTimeout(() => {
-            formContent.style.display = "none";
-            formSuccess.classList.add("show");
-          }, 400);
-        }, 1800);
       });
 
       // ── Smooth nav links
@@ -2358,61 +2206,11 @@
           if (target) {
             e.preventDefault();
             const offset = 80;
-            const top =
-              target.getBoundingClientRect().top + window.scrollY - offset;
+            const top = target.getBoundingClientRect().top + window.scrollY - offset;
             window.scrollTo({ top, behavior: "smooth" });
           }
         });
       });
-
-      // ── Floating CTA hide on booking section visible
-      const bookingSection = document.getElementById("booking");
-      const floatCta = document.querySelector(".float-cta");
-      const floatObs = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            floatCta.style.opacity = entry.isIntersecting ? "0" : "1";
-            floatCta.style.pointerEvents = entry.isIntersecting
-              ? "none"
-              : "auto";
-          });
-        },
-        { threshold: 0.3 }
-      );
-      if (bookingSection) {
-        floatCta.style.transition = "opacity 0.4s ease";
-        floatObs.observe(bookingSection);
-      }
-
-      // ── Counter animation
-      function animateCounter(el, target, suffix = "") {
-        let start = 0;
-        const duration = 1800;
-        const step = (timestamp) => {
-          if (!start) start = timestamp;
-          const progress = Math.min((timestamp - start) / duration, 1);
-          const eased = 1 - Math.pow(1 - progress, 3);
-          el.textContent = Math.floor(eased * target) + suffix;
-          if (progress < 1) requestAnimationFrame(step);
-          else el.textContent = target + suffix;
-        };
-        requestAnimationFrame(step);
-      }
-
-      const statsObs = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const statNums = document.querySelectorAll(".hero-stat-num");
-              // Already set as HTML, no counter needed here
-              statsObs.disconnect();
-            }
-          });
-        },
-        { threshold: 0.5 }
-      );
-      const statsEl = document.querySelector(".hero-stats");
-      if (statsEl) statsObs.observe(statsEl);
     </script>
   </body>
 </html>
